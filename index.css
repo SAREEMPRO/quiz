@@ -1,0 +1,263 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    margin: 0;
+    min-height: 78vh;
+    background: linear-gradient(135deg, #000000, #ff0000);
+}
+
+/* Add this style to your CSS */
+.message {
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    /* margin-top: 5px; */
+    /* margin-left: 630px; */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 250px;
+    position: relative;
+    z-index: 2;
+    margin: 160px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 20px 28px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+
+h1 {
+    color: #428bca;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-bottom: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.option {
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: rgb(0, 33, 61);
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    overflow: auto;
+    max-height: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+.box div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background-color: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.0) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .box div {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .box div {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+    }
+    body {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    body {
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 20px 28px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-purple-light-effect-electronic-technology-background-backgrounddatabusinessblueelectronictechnologyintelligentblue-backgroundtechnology-backgroundlightcool-image_78722.jpg);
+    padding: 20px;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.incorrect-answers {
+    max-height: 400px;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.answer {
+    margin-bottom: 20px;
+}
