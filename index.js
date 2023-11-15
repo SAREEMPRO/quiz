@@ -10,9 +10,9 @@ const quizData = [
       answer: 'Jupiter',
     },
     {
-      question: '3.Madam ji Leaving In Which Country ?',
-      options: ['Brazil', 'Germany', 'France', 'Canada'],
-      answer: 'Canada',
+      question: '3. Which country won the FIFA World Cup in 2018?',
+      options: ['Brazil', 'Germany', 'France', 'Argentina'],
+      answer: 'France',
     },
     {
       question: '4. What is the tallest mountain in the world?',
